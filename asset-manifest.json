@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/commath-project/static/css/main.cbbcb3ef.chunk.css",
-    "main.js": "/commath-project/static/js/main.615c8897.chunk.js",
-    "main.js.map": "/commath-project/static/js/main.615c8897.chunk.js.map",
-    "runtime-main.js": "/commath-project/static/js/runtime-main.b475e6e9.js",
-    "runtime-main.js.map": "/commath-project/static/js/runtime-main.b475e6e9.js.map",
-    "static/js/2.ee47bf5b.chunk.js": "/commath-project/static/js/2.ee47bf5b.chunk.js",
-    "static/js/2.ee47bf5b.chunk.js.map": "/commath-project/static/js/2.ee47bf5b.chunk.js.map",
-    "index.html": "/commath-project/index.html",
-    "precache-manifest.97def8caa0d89cd60c6c9e969604be57.js": "/commath-project/precache-manifest.97def8caa0d89cd60c6c9e969604be57.js",
-    "service-worker.js": "/commath-project/service-worker.js",
-    "static/css/main.cbbcb3ef.chunk.css.map": "/commath-project/static/css/main.cbbcb3ef.chunk.css.map",
-    "static/js/2.ee47bf5b.chunk.js.LICENSE.txt": "/commath-project/static/js/2.ee47bf5b.chunk.js.LICENSE.txt"
+    "main.css": "/commath-project/front-end/static/css/main.cbbcb3ef.chunk.css",
+    "main.js": "/commath-project/front-end/static/js/main.615c8897.chunk.js",
+    "main.js.map": "/commath-project/front-end/static/js/main.615c8897.chunk.js.map",
+    "runtime-main.js": "/commath-project/front-end/static/js/runtime-main.a3fac578.js",
+    "runtime-main.js.map": "/commath-project/front-end/static/js/runtime-main.a3fac578.js.map",
+    "static/js/2.ee47bf5b.chunk.js": "/commath-project/front-end/static/js/2.ee47bf5b.chunk.js",
+    "static/js/2.ee47bf5b.chunk.js.map": "/commath-project/front-end/static/js/2.ee47bf5b.chunk.js.map",
+    "index.html": "/commath-project/front-end/index.html",
+    "precache-manifest.fb5c6e30fa40ebbc86a72c1664009c31.js": "/commath-project/front-end/precache-manifest.fb5c6e30fa40ebbc86a72c1664009c31.js",
+    "service-worker.js": "/commath-project/front-end/service-worker.js",
+    "static/css/main.cbbcb3ef.chunk.css.map": "/commath-project/front-end/static/css/main.cbbcb3ef.chunk.css.map",
+    "static/js/2.ee47bf5b.chunk.js.LICENSE.txt": "/commath-project/front-end/static/js/2.ee47bf5b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b475e6e9.js",
+    "static/js/runtime-main.a3fac578.js",
     "static/js/2.ee47bf5b.chunk.js",
     "static/css/main.cbbcb3ef.chunk.css",
     "static/js/main.615c8897.chunk.js"
