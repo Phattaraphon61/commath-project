@@ -3,29 +3,20 @@ import ReactDOM from 'react-dom';
 import Page1 from './viws/Page1'
 import Page2 from './viws/Page2'
 import './index.css';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect, useRoutes } from 'react-router-dom';
 import Basic from './myform'
-class Game extends React.Component {
-  render() {
-    return (
-      <BrowserRouter  basename={process.env.PUBLIC_URL}>
-        <Switch>
-         
-          <Route path="/page2">
-            <Page2 />
-          </Route> 
-          <Route path="/">
-            <Page1 />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-    );
-  }
+import routes from './routes'
+const App = () =>{
+const router = useRoutes(routes)
+return <di>{router}</di>
 }
+export default App;
 
 // ========================================
 
 ReactDOM.render(
-  <Game />,
+  <BrowserRouter>
+  <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );
