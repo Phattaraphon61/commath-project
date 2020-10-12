@@ -3,8 +3,9 @@ import React from 'react'
 export default function Page1() {
     return (
         <div>
-
-            sdfsdfsdf
+            <a href="page2">
+            ddddd
+            </a>
         </div>
     )
 }
