@@ -1,22 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Page1 from './viws/Page1'
-import Page2 from './viws/Page2'
-import './index.css';
-import { BrowserRouter, Switch, Route, Redirect, useRoutes } from 'react-router-dom';
-import Basic from './myform'
-import routes from './routes'
-const App = () =>{
-const router = useRoutes(routes)
-return <di>{router}</di>
-}
-export default App;
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import * as serviceWorker from "./serviceWorker";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-// ========================================
 
 ReactDOM.render(
   <BrowserRouter>
-  <App />
+    <App />
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
