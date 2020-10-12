@@ -4,7 +4,7 @@ export default function Page1() {
     return (
         <div>
             <a href="page2">
-            ddddd
+            click
             </a>
         </div>
     )
