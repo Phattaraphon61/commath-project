@@ -10,11 +10,11 @@ class Game extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/">
-            <Page1 />
-          </Route>
           <Route path="/page1">
             <Page2 />
+          </Route>
+          <Route path="/">
+            <Page1 />
           </Route>
         </Switch>
       </BrowserRouter>
