@@ -8,12 +8,12 @@ class Game extends React.Component {
   render() {
     return (
       <BrowserRouter>
-      <Switch>
-      <Route path="/">
-            <Page1/>
-        </Route>
-      </Switch>
-    </BrowserRouter>
+        <Switch>
+          <Route path="/">
+            <Page1 />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
@@ -21,6 +21,6 @@ class Game extends React.Component {
 // ========================================
 
 ReactDOM.render(
-  <Game/>,
-document.getElementById('root')
+  <Game />,
+  document.getElementById('root')
 );
