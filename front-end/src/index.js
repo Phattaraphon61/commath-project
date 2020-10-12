@@ -10,11 +10,12 @@ class Game extends React.Component {
     return (
       <BrowserRouter  basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route path="/page1">
-            <Page1 />
-          </Route>
+         
           <Route path="/page2">
             <Page2 />
+          </Route> 
+          <Route path="/">
+            <Page1 />
           </Route>
         </Switch>
       </BrowserRouter>
