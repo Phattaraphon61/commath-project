@@ -13,7 +13,7 @@ const routes = [
       element: <Main />,
     },
     {
-      path: "cmpj",
+      path: "commath-project",
       element: <Main />,
     },
     {

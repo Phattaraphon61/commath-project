@@ -11,8 +11,10 @@ function Main() {
   }
   return (
     <div>
-        <button onClick={()=>{nextPage("Number1")}}>
+        <button >
+            <a href="/Number1">
             <h3>Number 1</h3>
+            </a>
         </button>
         <br/>
         <button onClick={()=>{nextPage("Number2")}} >
