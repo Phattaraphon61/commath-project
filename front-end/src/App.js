@@ -15,20 +15,29 @@
 import React from 'react';
 import './App.css';
 import Navbar from './views/Navbar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Page1 from './views/Number1';
-import Page2 from './views/Number2';
-import Page3 from './views/Number3';
+import { BrowserRouter as Router, Switch, Route,Redirect } from 'react-router-dom';
+import MiniDrawer from './views/Main'
+import Page1 from './views/Page1';
+import Page2 from './views/Page2';
+import Page3 from './views/Page3';
+import Page4 from './views/Page4';
+import Page5 from './views/Page5';
+import Page6 from './views/Page6';
+
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
+        <MiniDrawer/>
         <Switch>
-          <Route path='/' exact component={Page1} />
-          <Route path='/reports' component={Page2} />
-          <Route path='/products' component={Page3} />
+          <Route path='/commath-project/page2' component={Page2} />
+          <Route path='/commath-project/page3' component={Page3} />
+          <Route path='/commath-project/page4' component={Page4} />
+          <Route path='/commath-project/page5' component={Page5} />
+          <Route path='/commath-project/page6' component={Page6} />
+          <Route path='/commath-project/page1' component={Page1} />
+          <Route path='/commath-project'><Redirect to="/commath-project/page1" /></Route>
         </Switch>
       </Router>
     </>

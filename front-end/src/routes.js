@@ -1,20 +1,20 @@
 import React from "react";
-import Main from "./views/Main";
-import Number1 from "./views/Number1";
-import Number2 from "./views/Number2";
-import Number3 from "./views/Number3";
-import Number4 from "./views/Number4";
-import Number5 from "./views/Number5";
-import Number6 from "./views/Number6";
+import MiniDrawer from "./views/Main";
+import Number1 from "./views/Page1";
+import Number2 from "./views/Page2";
+import Number3 from "./views/Page3";
+import Number4 from "./views/Page4";
+import Number5 from "./views/Page5";
+import Number6 from "./views/Page6";
 
 const routes = [
     {
       path: "/",
-      element: <Main />,
+      element: <MiniDrawer />,
     },
     {
       path: "commath-project",
-      element: <Main />,
+      element: <MiniDrawer />,
     },
     {
       path: "Number1",
