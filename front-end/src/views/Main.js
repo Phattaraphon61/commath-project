@@ -60,9 +60,15 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import AllInclusiveIcon from '@material-ui/icons/AllInclusive';
 import { Link } from 'react-router-dom';
-
-const drawerWidth = 240;
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import AutorenewIcon from '@material-ui/icons/Autorenew';
+import BarChartIcon from '@material-ui/icons/BarChart';
+import BookIcon from '@material-ui/icons/Book';
+import ClearAllIcon from '@material-ui/icons/ClearAll';
+import BookmarksIcon from '@material-ui/icons/Bookmarks';
+const drawerWidth = 300;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -161,7 +167,7 @@ export default function MiniDrawer() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        Mini variant drawer
+                        Project Commath
           </Typography>
                 </Toolbar>
             </AppBar>
@@ -179,24 +185,35 @@ export default function MiniDrawer() {
                 }}
             >
                 <div className={classes.toolbar}>
+                    <div style={{marginRight:"20x"}}>61114440472 ภัทรพล ผิวเรือง</div>
                     <IconButton onClick={handleDrawerClose}>
                         {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                     </IconButton>
+                    
+                    
                 </div>
+                
+                
                 <Divider />
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <Link to={`page${index+1}`}>
+                    {['บทที่ 1 Basic Computing', 'บทที่ 2 Linear Equations', 'บทที่ 3 Interpolation', 'บทที่ 4 Differentiation','บทที่ 5 Integration','บทที่ 6 Root-finding'].map((text, index) => (
+                        <Link to={`page${index+1}`} style={{textDecoration:"none"}}>
                             <ListItem button key={text}>
 
-                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                                <ListItemText primary={text} />
+                                <ListItemIcon>{index == 0  ? <AutorenewIcon /> :
+                                 index == 1 ?<AssignmentIcon />:
+                                 index == 2 ?<AllInclusiveIcon />:
+                                 index == 3 ?<BarChartIcon />:
+                                 index == 4 ?<BookIcon />:
+                                 index == 5 ?<BookmarksIcon />:
+                                 index == 6 ?<ClearAllIcon />:null}</ListItemIcon>
+                                <ListItemText primary={text} style={{color:"#000000"}} />
 
                             </ListItem>
                         </Link>
                     ))}
                 </List>
-                <Divider />
+                {/* <Divider />
                 <List>
                     {['All mail', 'Trash', 'Spam'].map((text, index) => (
                         <ListItem button key={text}>
@@ -204,7 +221,7 @@ export default function MiniDrawer() {
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}
-                </List>
+                </List> */}
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.toolbar} />
