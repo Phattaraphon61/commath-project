@@ -3,51 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
   Button,
-  CardActions,
   CardContent,
-  CardHeader,
-  Typography,
   Grid,
   TextField,
 } from "@material-ui/core";
-import { useNavigate } from "react-router-dom";
 import { getB2s } from "../functions/axios";
 
-const useStyles = makeStyles((theme) => ({
 
-  colorButton: {
-    backgroundColor: ' #f9c5d1 ',
-    backgroundImage: 'linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%)',
-    // color: 'white',
-    fontSize: 20,
-    fontWeight: "bold",
-    // fontFamily: 'Mali, cursive',
-
-  },
-  colorButton2: {
-    backgroundColor: ' #f9c5d1 ',
-    backgroundImage: 'linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%)',
-    fontSize: 20,
-    fontWeight: "bold",
-    marginTop: theme.spacing(5),
-  },
-
-  state: {
-    backgroundColor: ' #7f53ac ',
-    backgroundImage: 'linear-gradient(315deg, #7f53ac 0%, #647dee 74%)',
-  },
-
-
-  card: {
-    marginLeft: theme.spacing(25),
-    marginRight: theme.spacing(25),
-    marginTop: theme.spacing(20),
-    backgroundImage: 'linear-gradient(to right, #ffffff 0%, #e7dfe2 100%)',
-
-  },
-}));
 export default function Page1() {
-  const classes = useStyles();
   const [bit2string, setBit2string] = useState(111111111111111);
   const [result, setResult] = useState("");
   const generate = () => {
@@ -57,7 +20,7 @@ export default function Page1() {
   };
   return (
     <React.Fragment>
-      <div class="container text-center" style={{marginTop:"80px"}}> 
+      <div class="container text-center" style={{ marginTop: "80px" }}>
         <h1>บทที่ 1 Basic Computing</h1>
       </div>
       <div>
@@ -95,21 +58,6 @@ export default function Page1() {
             generate
                   </Button>
         </div>
-        {/* <Grid item xs={12}>
-                  <Button
-                    onClick={back}
-                    fullWidth
-                    variant="contained"
-                    className={classes.colorButton2}
-                  >
-                    กลับ
-                </Button>
-                </Grid> */}
-
-
-
-
-
       </div>
     </React.Fragment>
   )
