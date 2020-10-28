@@ -1,15 +1,10 @@
-# Fast Api App
-
-## requirements
-
 from fastapi import FastAPI
 from pydantic import BaseModel
-from fastapi.middleware.cors import CORSMiddleware
 from numpy import sign
-#from nameko.rpc import rpc
-#from nameko.standalone.rpc import ClusterRpcProxy
+from starlette.middleware.cors import CORSMiddleware
+app = FastAPI()
 
-
+#domain where this api is hosted for example : localhost:5000/docs to see swagger documentation automagically generated.
 class eliminate(BaseModel):
     A:list
     b:list
@@ -32,29 +27,19 @@ class rootFinding(BaseModel):
     b:float
     dx:float
 
-# class Student(BaseModel):
-#     firstname:str
-#     lastname:str
-#     email:str
-
-app = FastAPI() # FlaskApp()
-# class Body(BaseModel):
-#     bitstring : str
-
 
 origins = [
     "*",
-    "http://localhost",
-    "http://localhost:80",
-    "http://localhost:8000",
-    "http://localhost:8000/b2s",
-    "http://localhost:8000/elimination",
-    "http://localhost:8000/interpolation",
-    "http://localhost:8000/differentiation",
-    "http://localhost:8000/integration",
-    "http://localhost:8000/root-finding"
+    "https://commath-phattaraphon.herokuapp.com",
+    "https://commath-phattaraphon.herokuapp.com/b2s",
+    "https://commath-phattaraphon.herokuapp.com/elimination",
+    "https://commath-phattaraphon.herokuapp.com/interpolation",
+    "https://commath-phattaraphon.herokuapp.com/differentiation",
+    "https://commath-phattaraphon.herokuapp.com/integration",
+    "https://commath-phattaraphon.herokuapp.com/root-finding"
 
 ]
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -63,11 +48,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 @app.get("/")
-def hello():
-    return {"Hello": "World"}
-    
+def home():
+    return {"111111"}
 @app.get("/b2s/{text}")
 def bit2int(text:str):
     s = int(text[0])
@@ -76,18 +59,6 @@ def bit2int(text:str):
     x = 1 + sum([ int(f[i])*2**(-(i+1)) for i in range(len(f)) ])
     result = (-1)**s * 2**(e-127) * x 
     return result
-
-# @app.post("/b2s/")
-# async def test(body: Body):
-#     b = body.bitstring
-#     s = int(b[0])
-#     e = int(b[1:9], 2)
-#     f = [ int(x) for x in b[9:] ]
-#     f = sum( [ f[i]*2**(-(i+1)) for i in range(len(f)) ] )
-#     x = 1 + f
-#     v = (-1)**s * 2**(e-127) * x
-#     return {"Result": v}
-
 @app.post("/elimination")
 def api(data:eliminate):
     lam = int(data.A[1][0]) / int(data.A[0][0])
