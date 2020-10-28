@@ -43,12 +43,12 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import AllInclusiveIcon from '@material-ui/icons/AllInclusive';
 import { Link } from 'react-router-dom';
-import AssignmentIcon from '@material-ui/icons/Assignment';
-import AutorenewIcon from '@material-ui/icons/Autorenew';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import BookIcon from '@material-ui/icons/Book';
-import ClearAllIcon from '@material-ui/icons/ClearAll';
-import BookmarksIcon from '@material-ui/icons/Bookmarks';
+import LooksOneIcon from '@material-ui/icons/LooksOne';
+import LooksTwoIcon from '@material-ui/icons/LooksTwo';
+import Looks3Icon from '@material-ui/icons/Looks3';
+import Looks4Icon from '@material-ui/icons/Looks4';
+import Looks5Icon from '@material-ui/icons/Looks5';
+import Looks6Icon from '@material-ui/icons/Looks6';
 const drawerWidth = 300;
 
 const useStyles = makeStyles((theme) => ({
@@ -184,13 +184,12 @@ function App() {
                 <Link to={`page${index + 1}`} style={{ textDecoration: "none" }}>
                   <ListItem button key={text}>
 
-                    <ListItemIcon>{index == 0 ? <AutorenewIcon /> :
-                      index == 1 ? <AssignmentIcon /> :
-                        index == 2 ? <AllInclusiveIcon /> :
-                          index == 3 ? <BarChartIcon /> :
-                            index == 4 ? <BookIcon /> :
-                              index == 5 ? <BookmarksIcon /> :
-                                index == 6 ? <ClearAllIcon /> : null}</ListItemIcon>
+                    <ListItemIcon>{index == 0 ? <LooksOneIcon /> :
+                      index == 1 ? <LooksTwoIcon /> :
+                        index == 2 ? <Looks3Icon /> :
+                          index == 3 ? <Looks4Icon /> :
+                            index == 4 ? <Looks5Icon /> :
+                              index == 5 ? <Looks6Icon />: null}</ListItemIcon>
                     <ListItemText primary={text} style={{ color: "#000000" }} />
 
                   </ListItem>
