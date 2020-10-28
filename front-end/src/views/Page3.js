@@ -1,19 +1,12 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
-import { Box } from '@material-ui/core'
+
 
 export default function Page3() {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container fixed>
-      <Box justifyContent="center">
-        <h1>บทที่ 3 Interpolation</h1>
-      </Box>
-        
-
-      </Container>
-    </React.Fragment>
+        <React.Fragment>
+        <div class="container text-center">
+          <h1>บทที่ 3 Interpolation</h1>
+          </div>  
+      </React.Fragment>
   )
 }

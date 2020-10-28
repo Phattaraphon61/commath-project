@@ -215,7 +215,8 @@ function App() {
               <Route path='/commath-project/page5' component={Page5} />
               <Route path='/commath-project/page6' component={Page6} />
               <Route path='/commath-project/page1' component={Page1} />
-              <Route path='/commath-project'><Redirect to="/commath-project/page1" /></Route>
+              <Route path='/commath-project'><Redirect to="/commath-project/page1" />
+              </Route>
             </Switch>
           </main>
         </div>
