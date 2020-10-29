@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 
 import {
   Button,
@@ -49,6 +49,21 @@ export default function Page2() {
       console.log(res)
     });
   };
+  
+  useEffect(() => {
+    const data = {
+      A: [
+        [a00, a01, a02],
+        [a10, a11, a12],
+        [a20, a21, a22],
+      ],
+      b: [b1, b2, b3],
+    };
+    getElimination(data).then((res) => {
+
+      console.log(res)
+    });
+  },[] )
 
   return (
     <React.Fragment>

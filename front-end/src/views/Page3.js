@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
 import {
   Button,
@@ -37,7 +37,16 @@ export default function Page3() {
       setresult(`วินาทีที่ ${x} จะมีความเร็วประมาณ ${res}`);
     });
   };
-
+  useEffect(() => {
+    const data = {
+      x: x,
+      xi: [xi1, xi2, xi3, xi4, xi5, xi6],
+      yi: [yi1, yi2, yi3, yi4, yi5, yi6],
+    };
+    getInterpolation(data).then((res) => {
+      
+    });
+  },[] )
   return (
     <React.Fragment>
       <div class="container text-center" style={{marginTop:"80px"}}>

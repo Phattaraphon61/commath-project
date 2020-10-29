@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import {
   Button,
   CardActions,
@@ -24,6 +24,15 @@ export default function Page5() {
       setresult(res);
     });
   };
+  useEffect(() => {
+    const data = {
+      a: a,
+      b: b,
+    };
+    getIntegration(data).then((res) => {
+      
+    });
+  },[] )
   return (
 
     <React.Fragment>

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import {
   Button,
   CardContent,
@@ -24,6 +24,16 @@ export default function Page5() {
       setresult(res);
     });
   };
+  useEffect(() => {
+    const data = {
+      a: a,
+      b: b,
+      dx: dx
+    };
+    getRootFinding(data).then((res) => {
+     
+    });
+  },[] )
   return (
     <React.Fragment>
       <div class="container text-center" style={{ marginTop: "80px" }}>

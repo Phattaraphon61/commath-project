@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React, { useState,useEffect } from "react";
+
 import {
   Card,
   Button,
@@ -18,6 +18,12 @@ export default function Page1() {
       setResult(res);
     });
   };
+
+  useEffect(() => {
+    getB2s(bit2string).then((res) => {
+      
+    });
+  },[] )
   return (
     <React.Fragment>
       <div class="container text-center" style={{ marginTop: "80px" }}>

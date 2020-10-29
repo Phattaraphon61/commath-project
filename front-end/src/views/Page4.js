@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import {
   Button,
   CardActions,
@@ -26,6 +26,16 @@ export default function Page4() {
       setresult(res)
     });
   };
+  useEffect(() => {
+    const data = {
+      h: h,
+      p: p
+
+    };
+    getDifferentiation(data).then((res) => {
+     
+    });
+  },[] )
   return (
 
     <React.Fragment>
